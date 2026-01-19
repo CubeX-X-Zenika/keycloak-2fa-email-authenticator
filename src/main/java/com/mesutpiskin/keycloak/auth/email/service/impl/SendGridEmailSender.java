@@ -30,7 +30,7 @@ import java.io.IOException;
  * </p>
  *
  * @author Mesut Pişkin
- * @version 26.0.0
+ * @version 26.1.1
  * @since 1.1.0
  */
 public class SendGridEmailSender implements EmailSender {

@@ -29,7 +29,7 @@ import software.amazon.awssdk.services.ses.model.*;
  * </p>
  *
  * @author Mesut Pişkin
- * @version 26.0.0
+ * @version 26.1.1
  * @since 1.1.0
  */
 public class AwsSesEmailSender implements EmailSender {

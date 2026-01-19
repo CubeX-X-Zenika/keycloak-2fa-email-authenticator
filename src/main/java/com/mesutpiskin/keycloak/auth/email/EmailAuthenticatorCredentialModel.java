@@ -19,7 +19,7 @@ import org.keycloak.credential.CredentialModel;
  * </p>
  *
  * @author Mesut Pişkin
- * @version 26.0.0
+ * @version 26.1.1
  * @since 1.0.0
  */
 public class EmailAuthenticatorCredentialModel extends CredentialModel {

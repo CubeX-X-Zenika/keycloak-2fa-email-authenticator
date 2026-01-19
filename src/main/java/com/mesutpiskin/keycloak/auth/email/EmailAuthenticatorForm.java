@@ -48,7 +48,7 @@ import java.util.Map;
  * </p>
  *
  * @author Mesut Pişkin
- * @version 26.0.0
+ * @version 26.1.1
  * @since 1.0.0
  */
 public class EmailAuthenticatorForm extends AbstractUsernameFormAuthenticator
