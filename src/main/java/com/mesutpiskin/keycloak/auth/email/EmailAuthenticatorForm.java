@@ -126,6 +126,7 @@ public class EmailAuthenticatorForm extends AbstractUsernameFormAuthenticator
 
         int length = resolvePositiveInt(configValues, EmailConstants.CODE_LENGTH, EmailConstants.DEFAULT_LENGTH);
         int ttl = resolvePositiveInt(configValues, EmailConstants.CODE_TTL, EmailConstants.DEFAULT_TTL);
+        int ttlMinutes = ttl / 60;
         int resendCooldown = resolvePositiveInt(configValues, EmailConstants.RESEND_COOLDOWN,
                 EmailConstants.DEFAULT_RESEND_COOLDOWN);
 
@@ -134,7 +135,7 @@ public class EmailAuthenticatorForm extends AbstractUsernameFormAuthenticator
             logger.infof("***** SIMULATION MODE ***** Email code send to %s for user %s is: %s",
                     context.getUser().getEmail(), context.getUser().getUsername(), code);
         } else {
-            sendEmailWithCode(context, code, ttl);
+            sendEmailWithCode(context, code, ttlMinutes);
         }
         session.setAuthNote(EmailConstants.CODE, code);
         long now = System.currentTimeMillis();
